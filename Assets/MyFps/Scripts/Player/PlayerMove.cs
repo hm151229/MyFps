@@ -30,6 +30,7 @@ namespace MyFps
 
         private float verticalVelocity;     //y축 속도 연산 결과 
 
+        [Header ("Player Grounded")]
         //그라운드 체크
         [SerializeField]
         private bool grounded = false;

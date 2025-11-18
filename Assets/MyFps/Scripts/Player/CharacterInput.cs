@@ -60,6 +60,8 @@ namespace MyFps
 
         private void JumpInput(bool isJump)
         {
+            if (jump == false) 
+                return;
             jump = isJump;
         }
         private void LookInput(float x, float y)

@@ -1,0 +1,28 @@
+using UnityEngine;
+namespace MySample
+{
+    /// <summary>
+    /// 총알을 관리하는 클래스
+    /// 리지디바디에 의해 움직임 구현
+    /// </summary>
+    public class Bullet : MonoBehaviour
+    {
+        #region Variables
+        //참조 
+        private Rigidbody rb;
+        [SerializeField]
+        private float moveForce = 10f;
+        #endregion
+
+        #region Custom Method
+        public void MoveForce()
+        {
+            if (rb == null)
+                rb = GetComponent<Rigidbody>();
+
+            rb.AddForce(transform.forward * moveForce, ForceMode.Impulse);
+        }
+        #endregion
+
+    }
+}
