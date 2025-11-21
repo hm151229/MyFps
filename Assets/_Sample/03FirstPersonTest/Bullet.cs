@@ -14,6 +14,12 @@ namespace MySample
         private float moveForce = 10f;
         #endregion
 
+        #region Unity Event Method
+        private void OnTriggerEnter(Collider other)
+        {
+            //데미지 주기
+        }
+        #endregion
         #region Custom Method
         public void MoveForce()
         {
